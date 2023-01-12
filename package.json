@@ -1,0 +1,35 @@
+{
+  "name": "018_00_html_css_menudesplegable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "",
+    "copy:css": "copyfiles -u 1 ./src/css/**/*.css build/public",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* build/public",
+    "copy:html": "copyfiles -u 1 ./src/*.html build/public",
+    "copy": "npm-run-all --parallel copy:*",
+
+    "build": "npm-run-all copy:* build:*",
+    "postbuild": "postcss build/public/css/*.css -u autoprefixer cssnano -r --no-map"
+    
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.13",
+    "copyfiles": "2.4.1",
+    "cssnano": "5.1.14",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "10.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byron2016/018_00_HTML_css_menuDesplegable.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Byron2016/018_00_HTML_css_menuDesplegable/issues"
+  },
+  "homepage": "https://github.com/Byron2016/018_00_HTML_css_menuDesplegable#readme"
+}
